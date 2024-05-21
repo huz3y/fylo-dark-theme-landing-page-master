@@ -1,0 +1,39 @@
+:root {
+  //BACKGROUND COLORS
+  --color-background-primary-light: hsl(
+    217,
+    28%,
+    15%
+  ); //Dark Blue (intro and email sign up background)
+  --color-background-primary-dark: hsl(
+    218,
+    28%,
+    13%
+  ); //Dark Blue (main background)
+  --color-background-footer: hsl(216, 53%, 9%); //Dark Blue (footer background)
+  --color-background-testimonials: hsl(
+    219,
+    30%,
+    18%
+  ); //Dark Blue (testimonials background)
+  //ACCENT COLORS
+  --color-accent-cyan: hsl(
+    176,
+    68%,
+    64%
+  ); //Cyan (inside call-to-action gradient)
+  --color-accent-blue: hsl(
+    198,
+    60%,
+    50%
+  ); //Blue (inside call-to-action gradient)
+  --color-accent-light-red: hsl(0, 100%, 63%); //Light Red (error)
+
+  //NEUTRAL COLORS
+  --color-white: hsl(0, 0%, 100%); //White
+  --color-black: hsl(0, 100%, 0%); //Black
+
+  //TYPOGRAPHY
+  --font-body-text: "Open Sans", sans-serif; //Body text --> Weights 400, 700 --> font-size: 14px
+  --font-header-text: "Raleway", sans-serif; //Headings, Call-to-actions, Header Navigation --> Weight 400, 700
+}

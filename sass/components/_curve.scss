@@ -1,0 +1,9 @@
+.curve {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-background-primary-dark);
+  mask-image: url(../../images/bg-curvy-desktop.svg);
+  mask-size: cover;
+}

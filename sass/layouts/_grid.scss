@@ -1,0 +1,30 @@
+.grid {
+  //GRID CONTAINER
+  &__container {
+    height: 351rem;
+    display: grid;
+    grid-template-rows: 20rem 170vh min-content 40vw repeat(3, min-content);
+    grid-template-columns:
+      [full-start] 1fr repeat(12, [col-start] minmax(8rem, 1fr) [col-end])
+      1fr [full-end];
+  }
+  //GRID CHILDREN
+  &__child {
+    grid-column: full-start / full-end;
+
+    &-nav {
+    }
+    &-header {
+    }
+    &-features {
+    }
+    &-about {
+    }
+    &-reviews {
+    }
+    &-cta {
+    }
+    &-footer {
+    }
+  }
+}

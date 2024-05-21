@@ -1,0 +1,127 @@
+.nav {
+  background-color: var(--color-background-primary-light);
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+
+  &__logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__logo {
+    padding: 4rem 8rem;
+  }
+
+  &__links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5rem;
+  }
+
+  &__list-item {
+    padding: 3rem 4rem;
+    list-style: none;
+    text-wrap: nowrap;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: var(--color-white);
+      letter-spacing: 0.2rem;
+    }
+
+    &:hover {
+      color: transparent;
+    }
+
+    &-1 {
+      position: relative;
+
+      &::after {
+        content: "Features";
+        display: block;
+        position: absolute;
+        font-weight: 700;
+        top: -10%;
+        left: -3%;
+        opacity: 0;
+      }
+    }
+
+    &-2 {
+      position: relative;
+      &::after {
+        content: "Team";
+        display: block;
+        position: absolute;
+        font-weight: 700;
+        top: -10%;
+        left: -3%;
+        opacity: 0;
+      }
+    }
+
+    &-3 {
+      position: relative;
+      &::after {
+        content: "Sign In";
+        display: block;
+        position: absolute;
+        font-weight: 700;
+        top: -10%;
+        left: -3%;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.nav__link-1:hover::after {
+  color: white;
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-white);
+  opacity: 1;
+}
+
+.nav__link-1:active::after {
+  color: white;
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-white);
+  transform: scale(0.95);
+  opacity: 1;
+}
+
+.nav__link-2:hover::after {
+  color: white;
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-white);
+  opacity: 1;
+}
+
+.nav__link-2:active::after {
+  color: white;
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-white);
+  transform: scale(0.95);
+  opacity: 1;
+}
+
+.nav__link-3:hover::after {
+  color: white;
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-white);
+  opacity: 1;
+}
+
+.nav__link-3:active::after {
+  color: white;
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-white);
+  transform: scale(0.95);
+  opacity: 1;
+}

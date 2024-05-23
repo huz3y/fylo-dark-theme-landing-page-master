@@ -1,3 +1,73 @@
 .footer {
   background-color: var(--color-background-footer);
+  padding: 20rem 12rem 10rem 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__img {
+    padding-bottom: 4.5rem;
+  }
+
+  &__paragraph {
+    position: relative;
+    padding: 0 4rem;
+    width: 120%;
+
+    &::before {
+      content: url("../../images/icon-location.svg");
+      position: absolute;
+      left: 0;
+      top: 5%;
+    }
+  }
+
+  &__text {
+    display: flex;
+    justify-content: space-between;
+
+    &-location {
+      width: 25%;
+    }
+
+    &-contacts {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-links-1 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-links-2 {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__icon {
+    &--social {
+      fill: #fff;
+      height: 3rem;
+      width: 3rem;
+      margin: 0rem 1rem 1rem 1rem;
+      transition: fill 0.2s;
+
+      &:hover,
+      &:active {
+        fill: var(--color-accent-cyan);
+        cursor: pointer;
+      }
+    }
+
+    &--contact {
+      margin-right: 2.5rem;
+      transform: translateY(0.3rem);
+    }
+  }
+
+  &__info {
+    padding-bottom: 1rem;
+  }
 }

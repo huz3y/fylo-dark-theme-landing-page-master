@@ -79,14 +79,26 @@
     font-size: 1.4rem;
     text-decoration: none;
     color: var(--color-accent-cyan);
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
   }
 
-  &:hover {
-    color: var(--color-white);
-    border-bottom: 1px solid var(--color-white);
+  &--inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      color: var(--color-white);
+      border-bottom: 1px solid var(--color-white);
+    }
+  }
+
+  &--primary {
+    color: var(--color-white) !important;
+
+    &:hover,
+    &:active {
+      font-weight: 700;
+    }
   }
 }
 

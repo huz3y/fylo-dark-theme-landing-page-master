@@ -166,13 +166,21 @@ body {
   font-size: 1.4rem;
   text-decoration: none;
   color: var(--color-accent-cyan);
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
 }
-.link:hover {
+.link--inline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link--inline:hover {
   color: var(--color-white);
   border-bottom: 1px solid var(--color-white);
+}
+.link--primary {
+  color: var(--color-white) !important;
+}
+.link--primary:hover, .link--primary:active {
+  font-weight: 700;
 }
 
 .link:hover .link__icon {
@@ -240,11 +248,66 @@ body {
 
 .footer {
   background-color: var(--color-background-footer);
+  padding: 20rem 12rem 10rem 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer__img {
+  padding-bottom: 4.5rem;
+}
+.footer__paragraph {
+  position: relative;
+  padding: 0 4rem;
+  width: 120%;
+}
+.footer__paragraph::before {
+  content: url("../../images/icon-location.svg");
+  position: absolute;
+  left: 0;
+  top: 5%;
+}
+.footer__text {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__text-location {
+  width: 25%;
+}
+.footer__text-contacts {
+  display: flex;
+  flex-direction: column;
+}
+.footer__text-links-1 {
+  display: flex;
+  flex-direction: column;
+}
+.footer__text-links-2 {
+  display: flex;
+  flex-direction: column;
+}
+.footer__icon--social {
+  fill: #fff;
+  height: 3rem;
+  width: 3rem;
+  margin: 0rem 1rem 1rem 1rem;
+  transition: fill 0.2s;
+}
+.footer__icon--social:hover, .footer__icon--social:active {
+  fill: var(--color-accent-cyan);
+  cursor: pointer;
+}
+.footer__icon--contact {
+  margin-right: 2.5rem;
+  transform: translateY(0.3rem);
+}
+.footer__info {
+  padding-bottom: 1rem;
 }
 
 .grid__container {
   display: grid;
-  grid-template-rows: 20rem repeat(3, min-content) repeat(2, min-content) 46rem;
+  grid-template-rows: 20rem repeat(3, min-content) repeat(2, min-content) min-content;
   grid-template-columns: [full-start] 1fr repeat(12, [col-start] minmax(8rem, 1fr) [col-end]) 1fr [full-end];
 }
 .grid__child {

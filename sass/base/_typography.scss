@@ -5,23 +5,31 @@ body {
   color: var(--color-white);
 }
 
-.heading-primary {
-  font-size: 4rem;
-  font-weight: 700;
-  font-family: var(--font-header-text);
+.heading {
+  &--primary {
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: var(--font-header-text);
 
-  &--hero {
-    width: 65%;
-    margin: 0 auto;
-  }
-  &--about {
-    line-height: 1.2;
-    width: 65%;
-    text-align: left;
+    &--hero {
+      width: 65%;
+      margin: 0 auto;
+    }
+    &--about {
+      line-height: 1.2;
+      width: 65%;
+      text-align: left;
+    }
   }
 }
 
-.heading-tertiary {
+.heading--secondary {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: var(--font-header-text);
+}
+
+.heading--tertiary {
   font-size: 2rem;
   font-weight: 700;
   font-family: var(--font-header-text);

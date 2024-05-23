@@ -2,7 +2,7 @@
   //GRID CONTAINER
   &__container {
     display: grid;
-    grid-template-rows: 20rem repeat(3, min-content) repeat(3, min-content);
+    grid-template-rows: 20rem repeat(3, min-content) repeat(2, min-content) 46rem;
     grid-template-columns:
       [full-start] 1fr repeat(12, [col-start] minmax(8rem, 1fr) [col-end])
       1fr [full-end];

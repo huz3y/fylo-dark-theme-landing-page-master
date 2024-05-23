@@ -1,4 +1,20 @@
 .btn {
+  display: inline-block;
+  position: relative;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: var(--color-white);
+  background-image: linear-gradient(
+    to right,
+    var(--color-accent-cyan),
+    var(--color-accent-blue)
+  );
+  padding: 1rem 3rem;
+  border-radius: 50px;
+  transition: all 0.3s;
+  border: none;
+  z-index: 4;
+
   &:link,
   &:visited {
     display: inline-block;
@@ -17,7 +33,7 @@
     z-index: 4;
   }
 
-  &::before {
+  &--animated::before {
     content: "";
     display: inline-block;
     position: absolute;
@@ -36,17 +52,23 @@
     transition: all 0.3s 0.1s ease-out;
   }
 
-  &:hover {
+  &--animated:hover {
     transform: translateY(-6px);
     filter: brightness(120%);
   }
 
+  &:hover,
   &:active {
+    filter: brightness(120%);
+    cursor: pointer;
+  }
+
+  &--animated:active {
     transform: translateY(-3px);
   }
 }
 
-.btn:hover::before {
+.btn--animated:hover::before {
   transform: scale(2);
   opacity: 0;
 }

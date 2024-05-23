@@ -52,16 +52,20 @@
           alt="background-image"
         />
         <div class="section-header__container">
-          <img
-            src="./images/illustration-intro.png"
-            alt=""
-            class="section-header__hero-img"
-          />
+          <div class="section-header__image-container">
+            <img
+              src="./images/illustration-intro.png"
+              alt=""
+              class="section-header__hero-img"
+            />
+          </div>
           <article class="section-header__hero-text">
-            <h1 class="heading-primary u-margin-bottom-medium">
+            <h1
+              class="heading-primary heading-primary--hero u-margin-bottom-medium"
+            >
               All your files in one secure location, accessible anywhere.
             </h1>
-            <p class="paragraph paragraph--big u-margin-bottom-medium">
+            <p class="paragraph paragraph--hero u-margin-bottom-medium">
               Fylo stores all your most important files in one secure location.
               Access them wherever you need, share and collaborate with friends
               family, and co-workers.
@@ -73,17 +77,148 @@
       <!-- -------- -->
       <!-- FEATURES -->
       <section class="grid__child grid__child-features section-features">
-        FEATURES
+        <div class="section-features__container">
+          <!-- FEATURE-1 -->
+          <div class="section-features__feature-1">
+            <img
+              src="./images/icon-access-anywhere.svg"
+              alt=""
+              class="feature__image u-margin-bottom-small"
+            />
+            <h3 class="heading-tertiary u-margin-bottom-tiny">
+              Access your files, anywhere
+            </h3>
+            <p class="paragraph">
+              The ability to use a smartphone, tablet, or computer to access
+              your account means your files follow you everywhere.
+            </p>
+          </div>
+          <!-- FEATURE-2 -->
+          <div class="section-features__feature-2">
+            <img
+              src="./images/icon-security.svg"
+              alt=""
+              class="feature__image u-margin-bottom-small"
+            />
+            <h3 class="heading-tertiary u-margin-bottom-tiny">
+              Security you can trust
+            </h3>
+            <p class="paragraph">
+              2-factor authentication and user-controlled encryption are just a
+              couple of the security features we allow to help secure your
+              files.
+            </p>
+          </div>
+          <!-- FEATURE-3 -->
+          <div class="section-features__feature-3">
+            <img
+              src="./images/icon-collaboration.svg"
+              alt=""
+              class="feature__image u-margin-bottom-small"
+            />
+            <h3 class="heading-tertiary u-margin-bottom-tiny">
+              Real-time collaboration
+            </h3>
+            <p class="paragraph">
+              Securely share files and folders with friends, family and
+              colleagues for live collaboration. No email attachments required.
+            </p>
+          </div>
+          <!-- FEATURE-4 -->
+          <div class="section-features__feature-4">
+            <img
+              src="./images/icon-any-file.svg"
+              alt=""
+              class="feature__image u-margin-bottom-small"
+            />
+            <h3 class="heading-tertiary u-margin-bottom-tiny">
+              Store any type of file
+            </h3>
+            <p class="paragraph">
+              Whether you're sharing holidays photos or work documents, Fylo has
+              you covered allowing for all file types to be securely stored and
+              shared.
+            </p>
+          </div>
+        </div>
       </section>
       <!-- ----- -->
       <!-- ABOUT -->
       <section class="grid__child grid__child-about section-about">
-        ABOUT
+        <div class="section-about__container">
+          <!-- IMAGE SIDE -->
+          <div class="section-about__img-container">
+            <img
+              src="./images/illustration-stay-productive.png"
+              alt="working people"
+              class="section-about__img"
+            />
+          </div>
+          <!-- TEXT SIDE -->
+          <article class="section-about__text-box">
+            <h1
+              class="heading-primary heading-primary--about u-margin-bottom-tiny"
+            >
+              Stay productive, wherever you are
+            </h1>
+            <p class="paragraph u-margin-bottom-tiny">
+              Never let location be an issue when accessing your files. Fylo has
+              you covered for all of your file storage needs.
+            </p>
+            <p class="paragraph u-margin-bottom-tiny">
+              Securely share files and folders with friends, family and
+              colleagues for live collaboration. No email attachments required.
+            </p>
+            <a href="#" class="link"
+              >See how Fylo works &nbsp;
+              <svg
+                class="link__icon"
+                width="16"
+                height="16"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs>
+                  <circle id="b" cx="6" cy="6" r="6" />
+                  <filter
+                    x="-25%"
+                    y="-25%"
+                    width="150%"
+                    height="150%"
+                    filterUnits="objectBoundingBox"
+                    id="a"
+                  >
+                    <feOffset in="SourceAlpha" result="shadowOffsetOuter1" />
+                    <feGaussianBlur
+                      stdDeviation="1"
+                      in="shadowOffsetOuter1"
+                      result="shadowBlurOuter1"
+                    />
+                    <feColorMatrix
+                      values="0 0 0 0 0.384313725 0 0 0 0 0.878431373 0 0 0 0 0.850980392 0 0 0 0.811141304 0"
+                      in="shadowBlurOuter1"
+                    />
+                  </filter>
+                </defs>
+                <g fill="currentColor" fill-rule="evenodd">
+                  <g transform="translate(2 2)">
+                    <use fill="currentColor" filter="url(#a)" xlink:href="#b" />
+                    <use fill="currentColor" xlink:href="#b" />
+                  </g>
+                  <path
+                    d="M8.582 6l-.363.35 1.452 1.4H5.333v.5h4.338L8.22 9.65l.363.35 2.074-2z"
+                    fill="#1B2330"
+                  />
+                </g>
+              </svg>
+            </a>
+          </article>
+        </div>
       </section>
       <!-- ------- -->
       <!-- REVIEWS -->
       <section class="grid__child grid__child-reviews section-reviews">
-        REVIEWS
+        <div class="section-reviews__container"></div>
       </section>
       <!-- -------------- -->
       <!-- CALL TO ACTION -->

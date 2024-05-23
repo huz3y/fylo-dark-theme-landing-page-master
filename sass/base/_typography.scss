@@ -9,17 +9,31 @@ body {
   font-size: 4rem;
   font-weight: 700;
   font-family: var(--font-header-text);
-  width: 65%;
-  margin: 0 auto;
+
+  &--hero {
+    width: 65%;
+    margin: 0 auto;
+  }
+  &--about {
+    line-height: 1.2;
+    width: 65%;
+    text-align: left;
+  }
+}
+
+.heading-tertiary {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: var(--font-header-text);
 }
 
 .paragraph {
   font-size: 1.4rem;
   font-family: var(--font-body-text);
-  width: 42%;
   margin: 0 auto;
 
-  &--big {
+  &--hero {
+    width: 42%;
     font-size: 1.6rem;
   }
 }

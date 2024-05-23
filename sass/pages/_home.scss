@@ -113,7 +113,75 @@
 }
 
 .section-reviews {
-  background-color: deeppink;
+  background-color: var(--color-background-primary-dark);
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+  z-index: 0;
+
+  &__container {
+    grid-column: col-start 1 / col-end 12;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__review {
+    background-color: var(--color-background-testimonials);
+    margin: 1rem 2rem;
+    border-radius: 3px;
+    padding: 4.5rem 3rem 3rem 3rem;
+    box-shadow: 4px 6px 20px var(--color-background-primary-light, 0.5);
+    position: relative;
+
+    &--1 {
+    }
+
+    &--2 {
+    }
+
+    &--3 {
+    }
+
+    &:first-of-type::before {
+      content: "\201C";
+      display: block;
+      position: absolute;
+      transform: translate(-70%, -53%);
+      font-family: sans-serif;
+      color: var(--color-accent-cyan);
+      line-height: 1;
+      font-size: 20rem;
+      z-index: -1;
+    }
+  }
+
+  &__comment {
+    font-size: 1.4rem;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+
+    &-img {
+      border-radius: 50%;
+      width: auto;
+      height: 3rem;
+      margin-right: 1rem;
+    }
+
+    &-text {
+    }
+
+    &-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    &-position {
+      font-size: 1rem;
+    }
+  }
 }
 
 .section-cta {

@@ -15,6 +15,12 @@
     align-items: center;
     text-align: center;
     z-index: 2;
+
+    @include respond(tab-port) {
+      width: 80%;
+      grid-column: col-start 1 / col-end 10;
+      margin: 0 auto;
+    }
   }
 
   &__image-container {
@@ -24,6 +30,10 @@
 
   &__hero-img {
     object-fit: cover;
+
+    @include respond(big-tab) {
+      width: 80%;
+    }
   }
 }
 
@@ -32,6 +42,10 @@
   display: grid;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
+
+  @include respond(tab-port) {
+    padding: 2.5rem 0;
+  }
 
   &__container {
     grid-column: col-start 1 / col-end 12;
@@ -44,6 +58,35 @@
     text-align: center;
 
     //CHANGE 34REM TO MIN-CONTENT IN LOWER SCREEN SIZE
+
+    @include respond(tab-port) {
+      grid-template-columns:
+        [full-start] 1fr repeat(
+          2,
+          [col-start] minmax(min-content, 1fr) [col-end]
+        )
+        1fr [full-end];
+      width: 70%;
+      margin: 0 auto;
+      grid-column: col-start 1 / col-end 10;
+    }
+
+    @include respond(phone) {
+      grid-template-rows: repeat(4, [row-start] 1fr [row-end]);
+    }
+  }
+
+  &__feature-image {
+    @include respond(tab-port) {
+      width: 9rem;
+    }
+    @include respond(tab-port) {
+      width: 8rem;
+    }
+
+    @include respond(tab-port) {
+      width: 7rem;
+    }
   }
 
   &__feature-1 {
@@ -51,8 +94,19 @@
     grid-column: col-start 1 / span 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+
+    @include respond(tab-port) {
+      width: 200%;
+      transform: translateX(-50%);
+    }
+
+    @include respond(phone) {
+      transform: translate(0);
+      grid-column: full-start / full-end;
+      width: 100%;
+    }
   }
 
   &__feature-2 {
@@ -60,8 +114,18 @@
     grid-column: col-start 2 / span 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+
+    @include respond(tab-port) {
+      width: 200%;
+    }
+    @include respond(phone) {
+      grid-column: full-start / full-end;
+      width: 100%;
+      grid-row: row-start 2 / span 1;
+      transform: translate(0);
+    }
   }
 
   &__feature-3 {
@@ -69,8 +133,20 @@
     grid-column: col-start 1 / span 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+
+    @include respond(tab-port) {
+      width: 200%;
+      transform: translateX(-50%);
+    }
+
+    @include respond(phone) {
+      grid-column: full-start / full-end;
+      width: 100%;
+      grid-row: row-start 3 / span 1;
+      transform: translate(0);
+    }
   }
 
   &__feature-4 {
@@ -78,8 +154,19 @@
     grid-column: col-start 2 / span 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+
+    @include respond(tab-port) {
+      width: 200%;
+    }
+
+    @include respond(phone) {
+      grid-column: full-start / full-end;
+      width: 100%;
+      grid-row: row-start 4 / span 1;
+      transform: translate(0);
+    }
   }
 }
 
@@ -92,14 +179,32 @@
   &__container {
     grid-column: col-start 1 / col-end 12;
     display: flex;
+
+    @include respond(tab-port) {
+      width: 80%;
+      margin: 0 auto;
+      justify-content: center;
+    }
+
+    @include respond(phone) {
+      width: 70%;
+      flex-direction: column;
+    }
   }
 
   &__img-container {
     flex: 1 1 50%;
+    @include respond(tab-port) {
+      flex: 1 1 40%;
+    }
   }
 
   &__img {
     object-fit: cover;
+
+    @include respond(tab-land) {
+      width: 100%;
+    }
   }
 
   &__text-box {
@@ -109,6 +214,12 @@
     justify-content: center;
     align-items: flex-start;
     padding: 3rem 4rem;
+
+    @include respond(tab-port) {
+      padding: 0;
+      padding-right: 1rem;
+      flex: 1 1 40%;
+    }
   }
 }
 
@@ -123,6 +234,12 @@
     grid-column: col-start 1 / col-end 12;
     display: flex;
     justify-content: space-between;
+
+    @include respond(tab-port) {
+      flex-wrap: wrap;
+      width: 70%;
+      margin: 0 auto;
+    }
   }
 
   &__review {
@@ -199,6 +316,18 @@
     margin: 1rem;
     width: 55%;
     transform: translateY(50%);
+
+    @include respond(tab-land) {
+      width: 60%;
+    }
+
+    @include respond(tab-port) {
+      width: 70%;
+    }
+
+    @include respond(phone) {
+      width: 80%;
+    }
   }
 
   &__text-box {

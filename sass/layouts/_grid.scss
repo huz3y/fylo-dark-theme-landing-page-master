@@ -6,6 +6,24 @@
     grid-template-columns:
       [full-start] 1fr repeat(12, [col-start] minmax(8rem, 1fr) [col-end])
       1fr [full-end];
+
+    @include respond(tab-port) {
+      grid-template-columns:
+        [full-start] repeat(2, 1fr) repeat(
+          10,
+          [col-start] minmax(8rem, 1fr) [col-end]
+        )
+        repeat(2, 1fr) [full-end];
+    }
+
+    @include respond(phone) {
+      grid-template-columns:
+        [full-start] repeat(2, 1fr) repeat(
+          10,
+          [col-start] minmax(6rem, 1fr) [col-end]
+        )
+        repeat(2, 1fr) [full-end];
+    }
   }
   //GRID CHILDREN
   &__child {

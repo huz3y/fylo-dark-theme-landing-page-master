@@ -19,6 +19,10 @@ body {
       line-height: 1.2;
       width: 65%;
       text-align: left;
+
+      @include respond(big-tab) {
+        width: 100%;
+      }
     }
   }
 }
@@ -43,5 +47,13 @@ body {
   &--hero {
     width: 42%;
     font-size: 1.6rem;
+
+    @include respond(phone) {
+      width: 60%;
+    }
+  }
+
+  &--features {
+    width: 50%;
   }
 }

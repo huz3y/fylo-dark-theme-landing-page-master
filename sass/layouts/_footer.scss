@@ -4,9 +4,23 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
+
+  @include respond(tab-port) {
+    padding: 20rem 6rem 5rem 6rem;
+    align-items: center;
+  }
 
   &__img {
     padding-bottom: 4.5rem;
+
+    @include respond(phone) {
+      align-self: flex-start;
+    }
+
+    @include respond(tab-port) {
+      width: 35%;
+    }
   }
 
   &__paragraph {
@@ -19,30 +33,74 @@
       position: absolute;
       left: 0;
       top: 5%;
+
+      @include respond(phone) {
+        top: 25%;
+        left: -10.5%;
+      }
+    }
+
+    @include respond(tab-port) {
+      margin-right: 2rem;
+    }
+
+    @include respond(phone) {
+      padding: 2rem 0;
     }
   }
 
   &__text {
     display: flex;
     justify-content: space-between;
+    @include respond(tab-port) {
+      justify-content: center;
+    }
+    @include respond(phone) {
+      flex-direction: column;
+      padding: 2.4rem;
+    }
 
     &-location {
       width: 25%;
+
+      @include respond(tab-port) {
+        padding-right: 2rem;
+      }
+      @include respond(phone) {
+        padding-left: 6rem;
+        align-self: stretch;
+        width: 80%;
+      }
     }
 
     &-contacts {
       display: flex;
       flex-direction: column;
+      @include respond(tab-port) {
+        margin-right: 2rem;
+      }
+      @include respond(phone) {
+        margin-bottom: 5rem;
+      }
     }
 
     &-links-1 {
       display: flex;
       flex-direction: column;
+      @include respond(tab-port) {
+        margin-right: 2rem;
+      }
+      @include respond(phone) {
+        margin-bottom: 2rem;
+      }
     }
 
     &-links-2 {
       display: flex;
       flex-direction: column;
+      @include respond(tab-port) {
+        margin-right: 2rem;
+      }
     }
   }
 
@@ -69,5 +127,16 @@
 
   &__info {
     padding-bottom: 1rem;
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @include respond(phone) {
+      flex-direction: row;
+      justify-content: center;
+    }
   }
 }

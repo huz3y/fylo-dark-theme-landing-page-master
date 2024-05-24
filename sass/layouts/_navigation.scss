@@ -12,6 +12,16 @@
 
   &__logo {
     padding: 4rem 8rem;
+
+    @include respond(tab-port) {
+      padding: 4rem 6rem;
+      width: 85%;
+    }
+
+    @include respond(phone) {
+      width: 70%;
+      padding: 0;
+    }
   }
 
   &__links-container {
@@ -19,12 +29,20 @@
     justify-content: center;
     align-items: center;
     margin-right: 5rem;
+
+    @include respond(phone) {
+      margin-right: 1rem;
+    }
   }
 
   &__list-item {
     padding: 3rem 4rem;
     list-style: none;
     text-wrap: nowrap;
+
+    @include respond(tab-port) {
+      padding: 1.5rem 2rem;
+    }
   }
 
   &__link {
@@ -33,6 +51,10 @@
       text-decoration: none;
       color: var(--color-white);
       letter-spacing: 0.2rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.8rem;
     }
 
     &:hover {

@@ -187,6 +187,11 @@ body {
   border: none;
   z-index: 4;
 }
+@media only screen and (max-width: 37.5em) {
+  .btn {
+    font-size: 1.3rem;
+  }
+}
 .btn:link, .btn:visited {
   display: inline-block;
   position: relative;
@@ -216,17 +221,44 @@ body {
   transform: translateY(-6px);
   filter: brightness(120%);
 }
+@media (pointer: coarse) {
+  .btn--animated:hover {
+    transform: translateY(0);
+    filter: brightness(100%);
+  }
+}
 .btn:hover, .btn:active {
   filter: brightness(120%);
   cursor: pointer;
 }
+@media (pointer: coarse) {
+  .btn:hover, .btn:active {
+    filter: brightness(100%);
+    cursor: none;
+  }
+}
+@media (pointer: coarse) {
+  .btn:active {
+    filter: brightness(120%);
+  }
+}
 .btn--animated:active {
   transform: translateY(-3px);
+}
+@media (pointer: coarse) {
+  .btn--animated:active {
+    transform: translate(0);
+  }
 }
 
 .btn--animated:hover::before {
   transform: scale(2);
   opacity: 0;
+}
+@media (pointer: coarse) {
+  .btn--animated:hover::before {
+    transform: scale(1);
+  }
 }
 
 .link:link, .link:visited {
@@ -937,7 +969,7 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .section-cta__box {
-    width: 80%;
+    width: 90%;
   }
 }
 .section-cta__text-box {

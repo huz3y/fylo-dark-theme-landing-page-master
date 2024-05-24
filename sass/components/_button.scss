@@ -15,6 +15,10 @@
   border: none;
   z-index: 4;
 
+  @include respond(phone) {
+    font-size: 1.3rem;
+  }
+
   &:link,
   &:visited {
     display: inline-block;
@@ -55,22 +59,45 @@
   &--animated:hover {
     transform: translateY(-6px);
     filter: brightness(120%);
+
+    @media (pointer: coarse) {
+      transform: translateY(0);
+      filter: brightness(100%);
+    }
   }
 
   &:hover,
   &:active {
     filter: brightness(120%);
     cursor: pointer;
+    @media (pointer: coarse) {
+      filter: brightness(100%);
+      cursor: none;
+    }
+  }
+
+  @media (pointer: coarse) {
+    &:active {
+      filter: brightness(120%);
+    }
   }
 
   &--animated:active {
     transform: translateY(-3px);
+
+    @media (pointer: coarse) {
+      transform: translate(0);
+    }
   }
 }
 
 .btn--animated:hover::before {
   transform: scale(2);
   opacity: 0;
+
+  @media (pointer: coarse) {
+    transform: scale(1);
+  }
 }
 
 .link {

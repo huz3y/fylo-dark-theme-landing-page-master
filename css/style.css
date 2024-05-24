@@ -862,6 +862,7 @@ body {
     flex-wrap: wrap;
     width: 70%;
     margin: 0 auto;
+    align-items: center;
   }
 }
 .section-reviews__review {

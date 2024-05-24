@@ -514,6 +514,7 @@ body {
 .grid__child {
   grid-column: full-start/full-end;
 }
+
 .nav {
   background-color: var(--color-background-primary-light);
   display: flex;

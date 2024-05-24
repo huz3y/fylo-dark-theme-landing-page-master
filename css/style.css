@@ -93,6 +93,10 @@ html {
 }
 
 body {
+  background-image: linear-gradient(to bottom, var(--color-background-primary-light) 0%, var(--color-background-primary-light) 20%, var(--color-background-primary-dark) 20%, var(--color-background-primary-dark) 100%);
+}
+
+body {
   font-family: var(--font-body-text);
   font-weight: 400;
   line-height: 1.6;
